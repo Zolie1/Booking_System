@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
     $stmt = $conn->prepare("DELETE FROM clients where client_id = ? ");
     $stmt -> bind_param("i", $client_id); 
     $stmt -> execute(); 
-    echo "Client deleted successfully"; 
+    echo "<br>"."Client deleted successfully"; 
 }
 
 $conn -> close();  
